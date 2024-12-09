@@ -48,7 +48,7 @@ function TaskList({ tasks }) {
   );
 }
 
-export default TaskList;
+export { TaskList };
 
 import React, { useState } from 'react';
 
@@ -73,7 +73,7 @@ function Task({ task }) {
   );
 }
 
-export default Task;
+export { Task };
 
 import React, { useState } from 'react';
 
@@ -114,7 +114,7 @@ function TaskInput({ addTask }) {
   );
 }
 
-export default TaskInput;
+export { TaskInput };
 
 import React from 'react';
 import ReactDOM from 'react-dom';
