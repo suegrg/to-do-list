@@ -1,0 +1,506 @@
+[debug] [2024-12-09T16:33:22.150Z] ----------------------------------------------------------------------
+[debug] [2024-12-09T16:33:22.158Z] Command:       /opt/homebrew/Cellar/node/23.3.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2024-12-09T16:33:22.159Z] CLI Version:   13.28.0
+[debug] [2024-12-09T16:33:22.159Z] Platform:      darwin
+[debug] [2024-12-09T16:33:22.159Z] Node Version:  v23.3.0
+[debug] [2024-12-09T16:33:22.159Z] Time:          Mon Dec 09 2024 11:33:22 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-09T16:33:22.159Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-09T16:33:22.164Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-09T16:33:22.164Z] > authorizing via signed-in user (suegurung6@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/suegurung/Desktop/charles hw/todo-list-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-12-09T16:33:25.775Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:25.775Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:25.776Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-12-09T16:33:26.159Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-12-09T16:33:26.159Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project to-do-list-be23f (to do list) 
+[info] 
+=== Dataconnect Setup
+[debug] [2024-12-09T16:33:26.766Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:26.766Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:26.767Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/to-do-list-be23f/billingInfo [none]
+[debug] [2024-12-09T16:33:27.176Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/to-do-list-be23f/billingInfo 200
+[debug] [2024-12-09T16:33:27.176Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/to-do-list-be23f/billingInfo {"name":"projects/to-do-list-be23f/billingInfo","projectId":"to-do-list-be23f","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2024-12-09T16:33:27.177Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:27.177Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:27.177Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/sqladmin.googleapis.com [none]
+[debug] [2024-12-09T16:33:27.177Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/sqladmin.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:33:27.515Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/sqladmin.googleapis.com 200
+[debug] [2024-12-09T16:33:27.516Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/sqladmin.googleapis.com [omitted]
+[info] ✔  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] i  dataconnect/dataconnect.yaml is unchanged 
+[info] i  dataconnect/schema/schema.gql is unchanged 
+[info] i  Skipping write of dataconnect/connector/connector.yaml 
+[info] i  dataconnect/connector/queries.gql is unchanged 
+[info] i  dataconnect/connector/mutations.gql is unchanged 
+[info] ✔  Detected WEB app in directory /Users/suegurung/Desktop/charles hw/todo-list-app 
+[info] i  Wrote new config to /Users/suegurung/Desktop/charles hw/todo-list-app/dataconnect/connector/connector.yaml 
+[info] I1209 11:33:31.880038   40385 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "/Users/suegurung/Desktop/charles hw/todo-list-app/dataconnect-generated/js/default-connector"
+I1209 11:33:31.885365   40385 generate.go:40] Generated all sources. Writing them to disk...
+I1209 11:33:31.886843   40385 collector.go:107] connector "default" javascriptSdk wrote into "/Users/suegurung/Desktop/charles hw/todo-list-app/dataconnect-generated/js/default-connector"
+Generated sources: esm/index.esm.js [186B] esm/package.json [17B] index.cjs.js [227B] package.json [634B] index.d.ts [264B] 
+I1209 11:33:31.892647   40385 installsdk.go:48] Package @firebasegen/default-connector is already installed. Skipping installation
+
+[info] i  Generated SDK code for default 
+[info] ✔  If you'd like to add more generated SDKs to your app your later, run firebase init dataconnect:sdk again 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/to-do-list-be23f/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Firestore Setup
+[debug] [2024-12-09T16:33:31.895Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:31.896Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:31.896Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firestore.googleapis.com [none]
+[debug] [2024-12-09T16:33:31.896Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firestore.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:33:32.212Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firestore.googleapis.com 200
+[debug] [2024-12-09T16:33:32.212Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firestore.googleapis.com [omitted]
+[debug] [2024-12-09T16:33:32.212Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:32.213Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:32.213Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/to-do-list-be23f/databases/(default) [none]
+[debug] [2024-12-09T16:33:32.535Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/to-do-list-be23f/databases/(default) 200
+[debug] [2024-12-09T16:33:32.535Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/to-do-list-be23f/databases/(default) {"name":"projects/to-do-list-be23f/databases/(default)","uid":"9964b06c-9f05-417b-a85d-d21f622221fa","createTime":"2024-12-09T16:24:00.413342Z","updateTime":"2024-12-09T16:24:00.413342Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-12-09T16:24:00.413342Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IIuYhueOm4oDMLrQwKqNm4oD"}
+[debug] [2024-12-09T16:33:32.535Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-12-09T16:33:32.535Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-12-09T16:33:32.536Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-09T16:33:32.536Z] > authorizing via signed-in user (suegurung6@gmail.com)
+[debug] [2024-12-09T16:33:32.536Z] [iam] checking project to-do-list-be23f for permissions ["firebase.projects.get"]
+[debug] [2024-12-09T16:33:32.536Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:32.536Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:32.536Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions [none]
+[debug] [2024-12-09T16:33:32.536Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:33:32.536Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T16:33:32.744Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions 200
+[debug] [2024-12-09T16:33:32.744Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+=== Genkit Setup
+[debug] [2024-12-09T16:33:36.806Z] Error: spawn(npm, view, genkit, version)
+  Stderr:
+{"type":"Buffer","data":[40,110,111,100,101,58,52,48,52,51,53,41,32,69,120,112,101,114,105,109,101,110,116,97,108,87,97,114,110,105,110,103,58,32,67,111,109,109,111,110,74,83,32,109,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,100,101,98,117,103,47,115,114,99,47,110,111,100,101,46,106,115,32,105,115,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,47,111,112,116,47,104,111,109,101,98,114,101,119,47,108,105,98,47,110,111,100,101,95,109,111,100,117,108,101,115,47,110,112,109,47,110,111,100,101,95,109,111,100,117,108,101,115,47,115,117,112,112,111,114,116,115,45,99,111,108,111,114,47,105,110,100,101,120,46,106,115,32,117,115,105,110,103,32,114,101,113,117,105,114,101,40,41,46,10,83,117,112,112,111,114,116,32,102,111,114,32,108,111,97,100,105,110,103,32,69,83,32,77,111,100,117,108,101,32,105,110,32,114,101,113,117,105,114,101,40,41,32,105,115,32,97,110,32,101,120,112,101,114,105,109,101,110,116,97,108,32,102,101,97,116,117,114,101,32,97,110,100,32,109,105,103,104,116,32,99,104,97,110,103,101,32,97,116,32,97,110,121,32,116,105,109,101,10,40,85,115,101,32,96,110,111,100,101,32,45,45,116,114,97,99,101,45,119,97,114,110,105,110,103,115,32,46,46,46,96,32,116,111,32,115,104,111,119,32,119,104,101,114,101,32,116,104,101,32,119,97,114,110,105,110,103,32,119,97,115,32,99,114,101,97,116,101,100,41,10]}
+
+[debug] [2024-12-09T16:33:37.792Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-09T16:33:37.792Z] > authorizing via signed-in user (suegurung6@gmail.com)
+[debug] [2024-12-09T16:33:37.792Z] [iam] checking project to-do-list-be23f for permissions ["firebase.projects.get"]
+[debug] [2024-12-09T16:33:37.792Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:37.792Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:37.792Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions [none]
+[debug] [2024-12-09T16:33:37.792Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:33:37.792Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T16:33:37.994Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions 200
+[debug] [2024-12-09T16:33:37.994Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T16:33:37.995Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:37.995Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:37.995Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:37.995Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:33:37.995Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-12-09T16:33:37.995Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:33:37.996Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-12-09T16:33:37.996Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:33:38.324Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com 200
+[debug] [2024-12-09T16:33:38.324Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-12-09T16:33:38.339Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com 200
+[debug] [2024-12-09T16:33:38.339Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] i  Skipping write of functions/package.json 
+[info] i  functions/.eslintrc.js is unchanged 
+[info] i  Skipping write of functions/tsconfig.json 
+[info] i  functions/tsconfig.dev.json is unchanged 
+[info] i  functions/src/index.ts is unchanged 
+[info] i  functions/.gitignore is unchanged 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 0.9.7
+ 
+[info] i  genkit: Installing NPM packages for genkit 
+[info] ✔  genkit: Successfully installed NPM packages 
+[info] i  genkit: Updating tsconfig.json 
+[info] ✔  genkit: Successfully updated tsconfig.json 
+[info] i  genkit: Updating package.json 
+[info] ✔  genkit: Successfully updated package.json 
+[info] i  genkit: Generating sample file 
+[info] ✔  genkit: Successfully generated sample file (src/genkit-sample.ts) 
+[info] Start the Genkit developer experience by running:
+[info]     cd functions && npm run genkit:start
+[info] 
+=== Functions Setup
+[debug] [2024-12-09T16:34:14.228Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-09T16:34:14.228Z] > authorizing via signed-in user (suegurung6@gmail.com)
+[debug] [2024-12-09T16:34:14.228Z] [iam] checking project to-do-list-be23f for permissions ["firebase.projects.get"]
+[debug] [2024-12-09T16:34:14.228Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:14.228Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:14.228Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions [none]
+[debug] [2024-12-09T16:34:14.228Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:34:14.228Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T16:34:14.419Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions 200
+[debug] [2024-12-09T16:34:14.419Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T16:34:14.419Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:14.420Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:14.420Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:14.420Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:14.420Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-12-09T16:34:14.420Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:34:14.421Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-12-09T16:34:14.422Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:34:14.797Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com 200
+[debug] [2024-12-09T16:34:14.797Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-12-09T16:34:14.798Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com 200
+[debug] [2024-12-09T16:34:14.798Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/cloudfunctions.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[error] Invalid codebase name. Codebase must be less than 64 characters and can contain only lowercase letters, numeric characters, underscores, and dashes.
+[info] ✔  Wrote to-do-list-codebase/package.json 
+[info] ✔  Wrote to-do-list-codebase/index.js 
+[info] ✔  Wrote to-do-list-codebase/.gitignore 
+[info] 
+=== Apphosting Setup
+[debug] [2024-12-09T16:34:41.743Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:41.743Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:41.744Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/to-do-list-be23f/billingInfo [none]
+[debug] [2024-12-09T16:34:41.879Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/to-do-list-be23f/billingInfo 200
+[debug] [2024-12-09T16:34:41.879Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/to-do-list-be23f/billingInfo {"name":"projects/to-do-list-be23f/billingInfo","projectId":"to-do-list-be23f","billingAccountName":"","billingEnabled":false}
+[info] i  Writing default settings to apphosting.yaml... 
+[info] i  apphosting.yaml is unchanged 
+[info] ✔  Create a new App Hosting backend with `firebase apphosting:backends:create` 
+[info] 
+=== Hosting Setup
+[debug] [2024-12-09T16:34:41.881Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:41.881Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:34:41.882Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-be23f [none]
+[debug] [2024-12-09T16:34:42.227Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-be23f 200
+[debug] [2024-12-09T16:34:42.227Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-be23f {"projectId":"to-do-list-be23f","projectNumber":"126832591995","displayName":"to do list","name":"projects/to-do-list-be23f","resources":{"hostingSite":"to-do-list-be23f"},"state":"ACTIVE","etag":"1_d04df8b0-9aaf-457b-bc58-0d64bc9a9cf2"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] ✔  Wrote public/404.html 
+[debug] [2024-12-09T16:34:48.271Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-12-09T16:34:48.325Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-12-09T16:34:48.326Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.0.2","browserURL":"https://www.gstatic.com/firebasejs/11.0.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.0.2/firebase.tgz"},"live":{"version":"11.0","browserURL":"https://www.gstatic.com/firebasejs/live/11.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.0/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.0.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.0.2/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.0.2/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.0.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.0.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.0.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.0.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.0.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.0.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.0.2/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.0.2/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+=== Storage Setup
+[info] 
+[info] Firebase Storage Security Rules allow you to define how and when to allow
+[info] uploads and downloads. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] ✔  Wrote storage.rules 
+[info] 
+=== Emulators Setup
+[info] i  apphosting: Initializing Emulator {"metadata":{"emulator":{"name":"apphosting"},"message":"Initializing Emulator"}}
+[debug] [2024-12-09T16:35:11.835Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:35:11.836Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:35:11.837Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-12-09T16:35:12.115Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-12-09T16:35:12.115Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] Wrote secrets as environment variables to apphosting.local.yaml.
+[info] apphosting.local.yaml has been automatically added to your .gitignore.
+[info] i  firestore: downloading cloud-firestore-emulator-v1.19.8.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.19.8.jar..."}}
+[debug] [2024-12-09T16:35:27.864Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.8.jar 
+[debug] [2024-12-09T16:35:28.027Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.8.jar 200
+[debug] [2024-12-09T16:35:28.027Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.8.jar [stream]
+[info] i  database: downloading firebase-database-emulator-v4.11.2.jar... {"metadata":{"emulator":{"name":"database"},"message":"downloading firebase-database-emulator-v4.11.2.jar..."}}
+[debug] [2024-12-09T16:35:30.438Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.11.2.jar 
+[debug] [2024-12-09T16:35:30.521Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.11.2.jar 200
+[debug] [2024-12-09T16:35:30.521Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.11.2.jar [stream]
+[info] i  pubsub: downloading pubsub-emulator-0.8.14.zip... {"metadata":{"emulator":{"name":"pubsub"},"message":"downloading pubsub-emulator-0.8.14.zip..."}}
+[debug] [2024-12-09T16:35:31.714Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.8.14.zip 
+[debug] [2024-12-09T16:35:31.837Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.8.14.zip 200
+[debug] [2024-12-09T16:35:31.837Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.8.14.zip [stream]
+[debug] [2024-12-09T16:35:34.690Z] Data is 66786933
+[debug] [2024-12-09T16:35:34.690Z] [unzip] Entry: pubsub-emulator/ (compressed_size=2 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:34.691Z] [unzip] Processing entry: pubsub-emulator/
+[debug] [2024-12-09T16:35:34.691Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/
+[debug] [2024-12-09T16:35:34.691Z] [unzip] Entry: pubsub-emulator/lib/ (compressed_size=2 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:34.691Z] [unzip] Processing entry: pubsub-emulator/lib/
+[debug] [2024-12-09T16:35:34.691Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/lib/
+[debug] [2024-12-09T16:35:34.691Z] [unzip] Entry: pubsub-emulator/lib/cloud-pubsub-emulator-0.8.14-all.jar (compressed_size=66782880 bytes, uncompressed_size=71655096 bytes)
+[debug] [2024-12-09T16:35:34.691Z] [unzip] Processing entry: pubsub-emulator/lib/cloud-pubsub-emulator-0.8.14-all.jar
+[debug] [2024-12-09T16:35:34.691Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/lib
+[debug] [2024-12-09T16:35:34.691Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/lib/cloud-pubsub-emulator-0.8.14-all.jar
+[debug] [2024-12-09T16:35:34.958Z] [unzip] Entry: pubsub-emulator/bin/ (compressed_size=2 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:34.958Z] [unzip] Processing entry: pubsub-emulator/bin/
+[debug] [2024-12-09T16:35:34.958Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/
+[debug] [2024-12-09T16:35:34.958Z] [unzip] Entry: pubsub-emulator/bin/cloud-pubsub-emulator.bat (compressed_size=889 bytes, uncompressed_size=2276 bytes)
+[debug] [2024-12-09T16:35:34.958Z] [unzip] Processing entry: pubsub-emulator/bin/cloud-pubsub-emulator.bat
+[debug] [2024-12-09T16:35:34.958Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin
+[debug] [2024-12-09T16:35:34.958Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator.bat
+[debug] [2024-12-09T16:35:34.960Z] [unzip] Entry: pubsub-emulator/bin/cloud-pubsub-emulator (compressed_size=2284 bytes, uncompressed_size=5728 bytes)
+[debug] [2024-12-09T16:35:34.960Z] [unzip] Processing entry: pubsub-emulator/bin/cloud-pubsub-emulator
+[debug] [2024-12-09T16:35:34.960Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin
+[debug] [2024-12-09T16:35:34.960Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator
+[info] i  storage: downloading cloud-storage-rules-runtime-v1.1.3.jar... {"metadata":{"emulator":{"name":"storage"},"message":"downloading cloud-storage-rules-runtime-v1.1.3.jar..."}}
+[debug] [2024-12-09T16:35:34.964Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar 
+[debug] [2024-12-09T16:35:35.030Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar 200
+[debug] [2024-12-09T16:35:35.030Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar [stream]
+[info] i  ui: downloading ui-v1.14.0.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.14.0.zip..."}}
+[debug] [2024-12-09T16:35:37.343Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.14.0.zip 
+[info] 
+=== Remoteconfig Setup
+[debug] [2024-12-09T16:35:37.399Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.14.0.zip 200
+[debug] [2024-12-09T16:35:37.399Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.14.0.zip [stream]
+[debug] [2024-12-09T16:35:37.609Z] Data is 3615311
+[debug] [2024-12-09T16:35:37.609Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:37.609Z] [unzip] Processing entry: client/
+[debug] [2024-12-09T16:35:37.609Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/
+[debug] [2024-12-09T16:35:37.610Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=293 bytes, uncompressed_size=293 bytes)
+[debug] [2024-12-09T16:35:37.610Z] [unzip] Processing entry: client/favicon-16x16.png
+[debug] [2024-12-09T16:35:37.610Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.610Z] [unzip] Writing file: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/favicon-16x16.png
+[debug] [2024-12-09T16:35:37.615Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=1433 bytes, uncompressed_size=2611 bytes)
+[debug] [2024-12-09T16:35:37.615Z] [unzip] Processing entry: client/safari-pinned-tab.svg
+[debug] [2024-12-09T16:35:37.615Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.615Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/safari-pinned-tab.svg
+[debug] [2024-12-09T16:35:37.618Z] [unzip] Entry: client/favicon.ico (compressed_size=2933 bytes, uncompressed_size=13294 bytes)
+[debug] [2024-12-09T16:35:37.618Z] [unzip] Processing entry: client/favicon.ico
+[debug] [2024-12-09T16:35:37.618Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.618Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/favicon.ico
+[debug] [2024-12-09T16:35:37.618Z] [unzip] Entry: client/index.html (compressed_size=1363 bytes, uncompressed_size=3071 bytes)
+[debug] [2024-12-09T16:35:37.618Z] [unzip] Processing entry: client/index.html
+[debug] [2024-12-09T16:35:37.618Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.618Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/index.html
+[debug] [2024-12-09T16:35:37.618Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=2684 bytes, uncompressed_size=2684 bytes)
+[debug] [2024-12-09T16:35:37.618Z] [unzip] Processing entry: client/android-chrome-192x192.png
+[debug] [2024-12-09T16:35:37.618Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.618Z] [unzip] Writing file: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/android-chrome-192x192.png
+[debug] [2024-12-09T16:35:37.619Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=2123 bytes, uncompressed_size=2152 bytes)
+[debug] [2024-12-09T16:35:37.619Z] [unzip] Processing entry: client/apple-touch-icon.png
+[debug] [2024-12-09T16:35:37.619Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.619Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/apple-touch-icon.png
+[debug] [2024-12-09T16:35:37.619Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=5369 bytes, uncompressed_size=5411 bytes)
+[debug] [2024-12-09T16:35:37.619Z] [unzip] Processing entry: client/android-chrome-512x512.png
+[debug] [2024-12-09T16:35:37.619Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.619Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/android-chrome-512x512.png
+[debug] [2024-12-09T16:35:37.619Z] [unzip] Entry: client/manifest.json (compressed_size=245 bytes, uncompressed_size=551 bytes)
+[debug] [2024-12-09T16:35:37.619Z] [unzip] Processing entry: client/manifest.json
+[debug] [2024-12-09T16:35:37.619Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.619Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/manifest.json
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Processing entry: client/robots.txt
+[debug] [2024-12-09T16:35:37.620Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Writing file: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/robots.txt
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=2034 bytes, uncompressed_size=2034 bytes)
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Processing entry: client/mstile-150x150.png
+[debug] [2024-12-09T16:35:37.620Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Writing file: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/mstile-150x150.png
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Processing entry: client/assets/
+[debug] [2024-12-09T16:35:37.620Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Entry: client/assets/index-ClZTY_JS.js.map (compressed_size=2328270 bytes, uncompressed_size=9947004 bytes)
+[debug] [2024-12-09T16:35:37.620Z] [unzip] Processing entry: client/assets/index-ClZTY_JS.js.map
+[debug] [2024-12-09T16:35:37.620Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets
+[debug] [2024-12-09T16:35:37.620Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/index-ClZTY_JS.js.map
+[debug] [2024-12-09T16:35:37.644Z] [unzip] Entry: client/assets/index-ClZTY_JS.js (compressed_size=567195 bytes, uncompressed_size=2035940 bytes)
+[debug] [2024-12-09T16:35:37.644Z] [unzip] Processing entry: client/assets/index-ClZTY_JS.js
+[debug] [2024-12-09T16:35:37.644Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets
+[debug] [2024-12-09T16:35:37.644Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/index-ClZTY_JS.js
+[debug] [2024-12-09T16:35:37.654Z] [unzip] Entry: client/assets/index-BdgySamB.css (compressed_size=35979 bytes, uncompressed_size=298654 bytes)
+[debug] [2024-12-09T16:35:37.654Z] [unzip] Processing entry: client/assets/index-BdgySamB.css
+[debug] [2024-12-09T16:35:37.654Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets
+[debug] [2024-12-09T16:35:37.654Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/index-BdgySamB.css
+[debug] [2024-12-09T16:35:37.655Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:37.655Z] [unzip] Processing entry: client/assets/extensions/
+[debug] [2024-12-09T16:35:37.655Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/extensions/
+[debug] [2024-12-09T16:35:37.655Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2024-12-09T16:35:37.655Z] [unzip] Processing entry: client/assets/extensions/default-extension.png
+[debug] [2024-12-09T16:35:37.655Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/extensions
+[debug] [2024-12-09T16:35:37.655Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/extensions/default-extension.png
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Processing entry: client/assets/img/
+[debug] [2024-12-09T16:35:37.656Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/img/
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Processing entry: client/assets/img/database.png
+[debug] [2024-12-09T16:35:37.656Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/img
+[debug] [2024-12-09T16:35:37.656Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/img/database.png
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Processing entry: client/assets/provider-icons/
+[debug] [2024-12-09T16:35:37.656Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2024-12-09T16:35:37.656Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_saml.svg
+[debug] [2024-12-09T16:35:37.656Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.657Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_saml.svg
+[debug] [2024-12-09T16:35:37.657Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2024-12-09T16:35:37.657Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_phone.svg
+[debug] [2024-12-09T16:35:37.657Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.657Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_phone.svg
+[debug] [2024-12-09T16:35:37.657Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2024-12-09T16:35:37.657Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2024-12-09T16:35:37.657Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.657Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2024-12-09T16:35:37.657Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2024-12-09T16:35:37.657Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2024-12-09T16:35:37.657Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.657Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_apple.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.658Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_apple.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_github.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.658Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_github.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.658Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2024-12-09T16:35:37.658Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2024-12-09T16:35:37.658Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.659Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.659Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.659Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_email.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.659Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_email.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2024-12-09T16:35:37.659Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_google.svg
+[debug] [2024-12-09T16:35:37.659Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.660Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_google.svg
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2024-12-09T16:35:37.660Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons
+[debug] [2024-12-09T16:35:37.660Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Processing entry: client/browserconfig.xml
+[debug] [2024-12-09T16:35:37.660Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.660Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/browserconfig.xml
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=475 bytes, uncompressed_size=475 bytes)
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Processing entry: client/favicon-32x32.png
+[debug] [2024-12-09T16:35:37.660Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Writing file: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/client/favicon-32x32.png
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:37.660Z] [unzip] Processing entry: server/
+[debug] [2024-12-09T16:35:37.660Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/
+[debug] [2024-12-09T16:35:37.661Z] [unzip] Entry: server/server.mjs.map (compressed_size=296496 bytes, uncompressed_size=1355667 bytes)
+[debug] [2024-12-09T16:35:37.661Z] [unzip] Processing entry: server/server.mjs.map
+[debug] [2024-12-09T16:35:37.661Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server
+[debug] [2024-12-09T16:35:37.661Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs.map
+[debug] [2024-12-09T16:35:37.668Z] [unzip] Entry: server/server.mjs (compressed_size=315701 bytes, uncompressed_size=1172682 bytes)
+[debug] [2024-12-09T16:35:37.668Z] [unzip] Processing entry: server/server.mjs
+[debug] [2024-12-09T16:35:37.668Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server
+[debug] [2024-12-09T16:35:37.668Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/server.mjs
+[debug] [2024-12-09T16:35:37.671Z] [unzip] Entry: server/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-12-09T16:35:37.671Z] [unzip] Processing entry: server/assets/
+[debug] [2024-12-09T16:35:37.671Z] [unzip] mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/assets/
+[debug] [2024-12-09T16:35:37.671Z] [unzip] Entry: server/assets/multipart-parser-DGCUZdXu.mjs.map (compressed_size=4791 bytes, uncompressed_size=17918 bytes)
+[debug] [2024-12-09T16:35:37.671Z] [unzip] Processing entry: server/assets/multipart-parser-DGCUZdXu.mjs.map
+[debug] [2024-12-09T16:35:37.671Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/assets
+[debug] [2024-12-09T16:35:37.671Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/assets/multipart-parser-DGCUZdXu.mjs.map
+[debug] [2024-12-09T16:35:37.671Z] [unzip] Entry: server/assets/multipart-parser-DGCUZdXu.mjs (compressed_size=2621 bytes, uncompressed_size=10390 bytes)
+[debug] [2024-12-09T16:35:37.671Z] [unzip] Processing entry: server/assets/multipart-parser-DGCUZdXu.mjs
+[debug] [2024-12-09T16:35:37.671Z] [unzip] else mkdir: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/assets
+[debug] [2024-12-09T16:35:37.671Z] [unzip] deflating: /Users/suegurung/.cache/firebase/emulators/ui-v1.14.0/server/assets/multipart-parser-DGCUZdXu.mjs
+[info] 
+=== Extensions Setup
+[debug] [2024-12-09T16:40:54.349Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-09T16:40:54.352Z] > authorizing via signed-in user (suegurung6@gmail.com)
+[debug] [2024-12-09T16:40:54.352Z] [iam] checking project to-do-list-be23f for permissions ["firebase.projects.get"]
+[debug] [2024-12-09T16:40:54.352Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:40:54.352Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:40:54.353Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions [none]
+[debug] [2024-12-09T16:40:54.353Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:40:54.353Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T16:40:54.586Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions 200
+[debug] [2024-12-09T16:40:54.586Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-be23f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T16:40:54.586Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:40:54.586Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:40:54.586Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-12-09T16:40:54.586Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:40:54.975Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com 200
+[debug] [2024-12-09T16:40:54.975Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com [omitted]
+[debug] [2024-12-09T16:40:54.976Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:40:54.976Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:40:54.976Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2024-12-09T16:40:54.976Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com:enable x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:40:55.528Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2024-12-09T16:40:55.529Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2024-12-09T16:41:05.529Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:05.530Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:05.530Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-12-09T16:41:05.530Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:41:05.924Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com 200
+[debug] [2024-12-09T16:41:05.924Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebaseextensions.googleapis.com [omitted]
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-12-09T16:41:05.928Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:05.928Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:05.928Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-12-09T16:41:05.928Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:41:06.308Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com 200
+[debug] [2024-12-09T16:41:06.308Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com [omitted]
+[warn] ⚠  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2024-12-09T16:41:06.308Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:06.308Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:06.308Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com:enable [none]
+[debug] [2024-12-09T16:41:06.308Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com:enable x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:41:06.851Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com:enable 200
+[debug] [2024-12-09T16:41:06.851Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com:enable [omitted]
+[debug] [2024-12-09T16:41:16.853Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:16.853Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:16.853Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-12-09T16:41:16.853Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/to-do-list-be23f
+[debug] [2024-12-09T16:41:17.296Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com 200
+[debug] [2024-12-09T16:41:17.296Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-be23f/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-12-09T16:41:17.299Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:17.299Z] Checked if tokens are valid: true, expires at: 1733764578067
+[debug] [2024-12-09T16:41:17.300Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-be23f [none]
+[debug] [2024-12-09T16:41:17.514Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-be23f 200
